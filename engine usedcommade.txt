@@ -1,0 +1,113 @@
+ 1  sudo apt update
+    2  sudo apt install -y docker-ce docker-ce-cli containerd.io
+    3  docker version
+    4  sudo apt update
+    5  sudo apt install -y docker.io
+    6  sudo systemctl start docker
+    7  sudo systemctl enable docker
+    8  vi dockerfile
+    9  vi elasticsearch.yml
+   10  docker build -t my-es-image .
+   11  docker run --rm -d   -p 9200:9200   -p 9300:9300   -v esdata:/usr/share/elasticsearch/data   --memory="4g"   -e ES_JAVA_OPTS="-Xms2g -Xmx2g"   my-es-image
+   12  docker-compose up -d
+   13  vi docker-compose.yml
+   14  docker-compose up -d
+   15  curl -X GET "localhost:9200/_cluster/health?pretty"
+   16  docker ps
+   17  docker ps -a
+   18  vi elasticsearch.yml
+   19  docker ps -a
+   20  docker build -t custom-elasticsearch .
+   21  docker run -d --name elasticsearch -p 9200:9200 -p 9300:9300 custom-elasticsearch
+   22  docker ps
+   23  curl -X GET "http://localhost:9200/"
+   24  docker-compose up -d
+   25  curl -X GET "localhost:9200/_cluster/health?pretty"
+   26  docker logs elasticsearch
+   27  docker ps
+   28  docker exec -it elasticsearch ps aux | grep elasticsearch
+   29  docker exec -it elasticsearch curl -X GET "localhost:9200/_cluster/health?pretty"
+   30  vi dockerfile
+   31  vi elasticsearch.yml
+   32  docker-compose.yml
+   33  vi docker-compose.yml
+   34  docker-compose up -d
+   35  docker-compose build
+   36  docker ps
+   37  curl -X GET "localhost:9200/_cluster/health?pretty"
+   38  vi dockerfile
+   39  curl -X GET "localhost:9200/_cluster/health?pretty"
+   40  sudo curl -L "https://github.com/docker/compose/releases/download/$(curl -s https://api.github.com/repos/docker/compose/releases/latest | grep tag_name | cut -d '"' -f 4)/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+   41  sudo chmod +x /usr/local/bin/docker-compose
+   42  docker-compose up -d
+   43  vi dockerfile
+   44  docker-compose build
+   45  docker ps
+   46  docker-compose up -d
+   47  vi docker-compose.yml
+   48  docker-compose up -d
+   49  docker-compose build
+   50  docker-compose up -d
+   51  vi docker-compose.yml
+   52  sudo lsof -i :9300
+   53  docker ps
+   54  vi docker-compose.yml
+   55  docker-compose down
+   56  docker-compose up -d
+   57  vi docker-compose.yml
+   58  docker-compose down
+   59  docker-compose up -d
+   60  vi docker-compose.yml
+   61  docker-compose up -d
+   62  docker-compose down
+   63  docker-compose build
+   64  docker-compose up -d
+   65  docker-compose build
+   66  vi docker-compose.yml
+   67  docker-compose down
+   68  docker-compose build
+   69  docker-compose up -d
+   70  docker rename elasticsearch elasticsearch_old
+   71  docker ps
+   72  docker-compose up -d
+   73  docker ps
+   74  docker-compose build
+   75  docker-compose up -d
+   76  > dockerfile
+   77  vi dockerfile
+   78  docker-compose down
+   79  docker-compose build --no-cache
+   80  docker-compose up -d
+   81  > dockerfile
+   82  vi dockerfile
+   83  docker-compose down
+   84  docker-compose build --no-cache
+   85  docker-compose up -d
+   86  docker logs elasticsearch
+   87  curl -X GET "localhost:9201/_cluster/health?pretty"
+   88  docker port elasticsearch
+   89  curl -X GET "localhost:9201/_cluster/health?pretty"
+   90  curl -X GET "0.0.0.0:9201/_cluster/health?pretty"
+   91  sudo netstat -tuln | grep 9201
+   92  docker ps
+   93  docker logs 8fb4f44b5877 
+   94  docker ps
+   95  curl -X GET "localhost:9201/_cluster/health?pretty"
+   96  docker logs 8fb4f44b5877
+   97  docker exec -it 8fb4f44b5877 /bin/bash
+   98  curl -X GET "localhost:9200/_cluster/health?pretty"
+   99  docker exec -it -d 8fb4f44b5877 /bin/bash
+  100  curl -X GET "localhost:9200/_cluster/health?pretty"
+  101  docker exec -it 8fb4f44b5877 /bin/bash
+  102  curl -X GET "localhost:9200/_cluster/health?pretty"
+  103  git init
+  104  git branch -m master main
+  105  git remote add origin git https://github.com/vikasviki2000/Dockerfile-for-Elasticsearch.git
+  106  git add .
+  107  git commit -m "Initial commit with Elasticsearch files"
+  108  git push -u origin main
+  109  git remote set-url origin https://github.com/vikasviki2000/Dockerfile-for-Elasticsearch.git
+  110  git remote -v
+  111  git remote add origin https://github.com/vikasviki2000/Dockerfile-for-Elasticsearch.git
+  112  git remote set-url origin https://github.com/vikasviki2000/Dockerfile-for-Elasticsearch.git
+  113  git push -u origin main
